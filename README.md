@@ -15,7 +15,7 @@ conveyor_belt_simulation/
 │
 ├── main.py                           # Entry point to run the simulation
 │── flowchart.png                     # Flow chart of conveyor belt
-── README.md                         # Documentation
+│── README.md                         # Documentation
 ```
 
 ## Thought Process & Development Approach
