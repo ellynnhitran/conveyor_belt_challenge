@@ -11,6 +11,7 @@ class ConveyorBeltSimulation:
         self.worker_pairs = [[Worker() for _ in range(workers_per_slot)] for _ in range(conveyor_len)]
         self.finished_products = 0
         self.unused_components = {'A': 0, 'B': 0}
+        self.recipe = {'C': {'A': 1, 'B': 1}}
         self.component_probabilities = {'A': 1/3, 'B': 1/3, None: 1/3}
 
     def generate_random_component(self):
