@@ -14,7 +14,7 @@ conveyor_belt_simulation/
 │   ├── simulation.py                  # ConveyorBeltSimulation class definition
 │
 ├── main.py                           # Entry point to run the simulation
-│
+│── flowchart.png                     # Flow chart of conveyor belt
 ── README.md                         # Documentation
 ```
 
