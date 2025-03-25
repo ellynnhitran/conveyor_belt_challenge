@@ -119,7 +119,7 @@ It means all components were picked up successfully, and the system was highly e
 - Exception Handling: The code assumes that all input conditions are valid. Adding error handling for unexpected cases (such as invalid component values) would improve robustness.
 
 ### Extensibility
-- Encapsulation of Configuration: Parameters like assembly_time, conveyor_len, etc., are hardcoded in simulation.py. Moving them to a separate config.py or JSON file would improve flexibility.
+- Encapsulation of Configuration: Parameters like assembly_time, conveyor_len, etc., are hardcoded in simulation.py. Moving them to a separate config.py file would improve flexibility.
 
 ### Flexibility
 - Limited dynamic behavior: Workers always act optimally and never make mistakes. Adding randomness (failure to pick items, dropping items,...) would make the system more flexible.
