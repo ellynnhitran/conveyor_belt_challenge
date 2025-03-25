@@ -30,6 +30,7 @@ The code was broken down into modular sections:
 - `simulation.py`: Conveyor belt logic and worker interactions.
 - `main.py`: Entry point to run the simulation.
 - `test_conveyor_simulation.py`: Unit tests for core functionalities.
+  
 ChatGPT assisted in refining function structures and improving code maintainability & flexibility.
 
 ## File Descriptions
