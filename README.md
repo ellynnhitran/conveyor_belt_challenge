@@ -22,7 +22,7 @@ conveyor_belt_simulation/
 ### 1️⃣ Flowchart & Planning
 - The initial idea was to design a simple but extensible simulation that follows conveyor belt systems.
 - Using ChatGPT, I first crafted a flowchart outlining how components appear randomly on the belt, how workers interact with components and how finished products are placed back onto the belt.
-- However, the initial flowchart had inefficiencies, including duplicated actions, redundant worker-pair logic and missing steps and cases. I optimized the system by reducing duplicate actions and ensuring that workers coordinate effectively.
+- However, the initial flowchart had inefficiencies, including duplicated actions, redundant worker-pair logic and missing steps and cases. I optimized the system by reducing duplicate actions and ensuring that workers coordinate effectively by adding suitable steps.
 
 ### 2️⃣ Code Development 
 The code was broken down into modular sections:
