@@ -18,7 +18,7 @@ conveyor_belt_simulation/
 │── README.md                         # Documentation
 ```
 
-## Thought Process & Development Approach
+## Thought Process 
 ### 1️⃣ Flowchart & Planning
 - The initial idea was to design a simple but extensible simulation that follows conveyor belt systems.
 - Using ChatGPT, I first crafted a flowchart outlining how components appear randomly on the belt, how workers interact with components and how finished products are placed back onto the belt.
