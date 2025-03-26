@@ -1,4 +1,5 @@
 import random
+import csv
 from src.worker import Worker
 
 class ConveyorBeltSimulation:
@@ -41,7 +42,7 @@ class ConveyorBeltSimulation:
         """
         removed_component = self.conveyor_belt.pop()
         self.conveyor_belt.insert(0, self.generate_random_component())
-        if removed_component in ['A', 'B']:
+        if removed_component in ['A', 'B']: # If component wasn’t picked up
             self.unused_components[removed_component] += 1  # Store unused components
 
     def worker_action(self, slot_index):
@@ -117,3 +118,37 @@ class ConveyorBeltSimulation:
         """
         print(f'Finished Products: {self.finished_products}')
         print(f'Unused Components: {self.unused_components}')
+
+    def run_simulation(self):
+        """
+        Runs the conveyor belt simulation for the specified number of steps.
+        """
+        # Open CSV file for writing results
+        with open('simulation_results.csv', mode='w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=['Step', 'Finished Products', 'Unused Components A', 'Unused Components B'])
+            writer.writeheader()  # Write header to CSV file
+
+            for step in range(1, self.steps + 1):
+                # Track and log results for each step at the start of the cycle
+                self.move_conveyor()
+                for i in range(self.conveyor_len):
+                    self.worker_action(i)
+                    self.place_product(i)
+
+                # Capture results after each step
+                step_data = {
+                    'Step': step,
+                    'Finished Products': self.finished_products,
+                    'Unused Components A': self.unused_components['A'],
+                    'Unused Components B': self.unused_components['B']
+                }
+
+                # Write results to CSV for the current step
+                writer.writerow(step_data)
+
+                # Optionally, print or log to monitor what's happening at each step
+                print(f"Step {step}: Finished Products = {self.finished_products}, "
+                      f"Unused A = {self.unused_components['A']}, Unused B = {self.unused_components['B']}")
+
+        # Display final results after all steps
+        self.display_results()
