@@ -70,10 +70,6 @@ To ensure everything is working correctly, run:
 python -m unittest discover tests
 ```
 
-To run a specific test file:
-```sh
-python -m unittest tests.test_conveyor_simulation
-```
 
 ## How It Works
 1. Components `A`, `B` and `None` appear randomly on the conveyor belt.
